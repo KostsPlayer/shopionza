@@ -1,0 +1,95 @@
+@use "./../../assets/mixin" as m;
+
+.preferences {
+  width: 100%;
+  height: auto;
+  @include m.flex($align: flex-start, $direction: column);
+  position: relative;
+  padding: 5% 25%;
+
+  &-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  &-subtitle {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 350;
+  }
+
+  &-theme {
+    // border: 2px black solid;
+    padding-top: 1.2rem;
+    font-weight: 350;
+    position: relative;
+    gap: 0.8rem;
+    width: 100%;
+    height: auto;
+    @include m.flex($justify: flex-start);
+    flex-wrap: wrap;
+
+    &-item {
+      font-size: 1.05rem;
+      @include m.flex();
+      border: 1px rgba($color: #000, $alpha: 0.2) solid;
+      padding: 0.7rem 0.9rem;
+
+      &-active {
+        border: 1px solid #000;
+        // transition: all 0.5s;
+      }
+    }
+  }
+
+  &-note {
+    padding: 2rem 0 0.7rem;
+    font-size: 1rem;
+    font-weight: 350;
+  }
+
+  &-other-theme {
+    width: 80%;
+    height: auto;
+    @include m.flex($justify: flex-start);
+    padding: 0.6rem 0.4rem;
+    background-color: rgba($color: gray, $alpha: 0.12);
+
+    &.active {
+      border-bottom: 2px solid #000;
+      //   transition: all 0.5s;
+    }
+
+    &-input {
+      //   border: 1px black solid;
+      width: 100%;
+      height: auto;
+      font-size: 1rem;
+      color: #000;
+      background-color: transparent;
+      border: 0;
+      outline: 0;
+    }
+  }
+
+  &-button {
+    // position: relative;
+    padding-top: 2rem;
+    width: 100%;
+    height: auto;
+    // border: 1px black solid;
+    @include m.flex($justify: flex-end);
+    gap: 0.5rem;
+
+    .skip {
+      padding: 0.5rem 1.2rem;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .next {
+      padding: 0.5rem 1.2rem;
+      border: #000 solid 1px;
+    }
+  }
+}

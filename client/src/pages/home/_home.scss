@@ -1,0 +1,8 @@
+@use "./../../assets/mixin" as m;
+
+.home {
+  width: 100%;
+  height: auto;
+  @include m.flex();
+  gap: 1rem;
+}
